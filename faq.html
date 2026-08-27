@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently asked questions about creating a Cedar Rapids municipal electric utility.">
+    <title>FAQ | Our Power Our Choice</title>
+    <link rel="icon" type="image/png" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="container">
+                <h1><a href="index.html" style="color: white; text-decoration: none;">Our Power. Our Choice.</a></h1>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="petition.html">Petition</a></li>
+                    <li><a href="data.html">The Data</a></li>
+                    <li><a href="faq.html" class="active">FAQ</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Get Involved</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <script src="mobile-menu.js"></script>
+
+    
+
+    <main>
+
+        <div class="page-hero">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <p>Plain answers to the questions we hear most, about what a muni utility is, how it would work, and what this campaign is actually asking for.</p>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container" style="max-width: 860px;">
+
+                <h2 style="color: #1a6b3a; margin-bottom: 1.5rem;">The Basics</h2>
+
+                <div class="faq-item open">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What is a municipal electric utility?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        A municipal electric utility (or "muni") is an electric utility owned and operated by a city government on behalf of its residents. Instead of a private corporation with shareholders, the utility is governed locally, either directly by the city council or by an appointed utility board made up of community members. Revenue goes back into the utility and the community, not to distant investors.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Isn't running a utility really complicated? Can a city actually do this?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Nearly 2,000 cities across the United States do it right now. In Iowa alone, Cedar Falls, Ames, and Muscatine have run their own electric utilities for over a century. These aren't small towns, Cedar Falls and Ames are comparable in size and complexity to Cedar Rapids neighborhoods. Municipal utilities hire professional staff, engineers, and managers just like any other utility. The city doesn't need to figure everything out from scratch; there are established models, professional associations (like the American Public Power Association), and neighboring cities to learn from.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Why would rates be lower under a muni?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Alliant Energy is a publicly traded company (NASDAQ: LNT). By law, it must generate returns for its shareholders. That profit margin is built into your electric rate. A municipal utility has no shareholders, every dollar collected goes toward operating costs, infrastructure, and reserves. Municipal utilities also generally pay lower borrowing costs (municipal bond rates vs. corporate debt), which matters when financing large infrastructure. The combination of no profit obligation and cheaper financing is why Iowa munis consistently charge less per kilowatt-hour than Alliant.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What does "municipalization" actually mean, does the city buy the power lines?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes, essentially. Municipalization means the city acquires the electric distribution infrastructure, the wires, transformers, substations, and equipment, that currently delivers power to Cedar Rapids homes and businesses. Alliant owns that infrastructure right now. The city would negotiate to purchase it, or in some cases pursue condemnation (eminent domain) if negotiation fails. The city would then operate it as a public utility. Generation (where the electricity actually comes from) is a separate question, many munis buy wholesale power from regional markets rather than owning their own power plants, at least initially.
+                    </div>
+                </div>
+
+                <h2 style="color: #1a6b3a; margin-top: 3rem; margin-bottom: 1.5rem;">The Process &amp; Timeline</h2>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What is this campaign actually asking for?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Right now, we are asking for one thing: <strong>the right to vote on it</strong>. We are not asking the city to acquire Alliant's infrastructure unilaterally. We are building the community support and evidence base needed to place a municipal utility referendum on the 2027 Cedar Rapids ballot. If voters approve the referendum, it gives the city a mandate to pursue acquisition through the proper legal and regulatory channels. The voters of Cedar Rapids decide, not the campaign, not the city council alone.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Why 2027? Why not sooner?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Getting a well-researched question onto a ballot takes time. We need to compile rate data, reliability comparisons, legal analysis, and an acquisition cost estimate, so that voters are making an informed decision, not a leap of faith. We also need enough petition signatures to demonstrate genuine community support. 2027 is the nearest realistic municipal election cycle that gives us time to do the groundwork properly. Moving faster risks putting a poorly supported question on the ballot and losing, which would set the cause back years.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What is the Iowa legal process for this?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Iowa Code Chapter 388 governs municipal utilities. A city can establish a municipal utility, but acquiring an existing investor-owned utility's service territory involves the Iowa Utilities Board (IUB). The IUB must find that the transfer is in the public interest. If the city and Alliant cannot agree on a purchase price, eminent domain proceedings are possible but complex. We are actively researching the exact legal pathway and will publish our findings on the <a href="data.html" style="color: #1a6b3a;">Data page</a> as we go. If you are an attorney with Iowa utility law experience, <a href="contact.html" style="color: #1a6b3a;">please reach out</a>.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Will Alliant fight this?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Almost certainly. Alliant Energy would likely spend significant resources opposing a Cedar Rapids municipalization effort, lobbying the city council, funding opposition campaigns, and challenging the process at the IUB. This is why we need an overwhelming community mandate and a rigorous, well-documented case. The stronger our data and the broader our coalition, the harder it is for Alliant to argue that this is fringe opposition rather than mainstream Cedar Rapids public opinion. Boulder, Colorado's two-decade fight with Xcel Energy is the cautionary tale, and also the playbook for what resilient community organizing looks like.
+                    </div>
+                </div>
+
+                <h2 style="color: #1a6b3a; margin-top: 3rem; margin-bottom: 1.5rem;">Concerns &amp; Tradeoffs</h2>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Won't buying Alliant's infrastructure cost Cedar Rapids a lot of money?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes, acquisition would be a significant capital investment. Cities typically finance it through municipal revenue bonds, which are repaid from utility revenues (not general tax dollars). If the acquired utility generates lower operating costs and stable revenue, the bonds are self-financing over time. The key question is whether the long-term savings to Cedar Rapids ratepayers outweigh the acquisition and financing costs. That analysis, a proper acquisition feasibility study, is one of the most important things this campaign needs to produce. We won't ask voters to approve something we haven't modeled financially.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What if the city runs the utility poorly?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        It's a fair concern. The answer is accountability. A municipal utility's governing board is directly accountable to Cedar Rapids voters, unlike Alliant's board, which is accountable to shareholders in 49 states. If a muni is mismanaged, residents can vote out the council members responsible, attend public board meetings, and demand change. With Alliant, your recourse is filing a complaint with the IUB and hoping for the best. Local accountability is an imperfect protection, but it's meaningfully better than none.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Does this affect Alliant's other customers in Iowa?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Cedar Rapids is Alliant's single largest load center in Iowa. Removing Cedar Rapids from Alliant's Iowa rate base would affect how costs are distributed across remaining Iowa customers. This is a legitimate concern and a factor the Iowa Utilities Board would examine. It is not a reason to avoid the question, but it is something that would need to be analyzed carefully and addressed in the IUB proceeding. Any transition would be designed to avoid unfairly burdening other Iowa ratepayers.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Is this related to the Save Morgan Valley campaign?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        They are separate campaigns with different specific goals, but they share a common thread: Alliant Energy making decisions that affect Cedar Rapids and Linn County residents without adequate local input. The proposed Morgan Valley gas plant is one symptom of the broader problem this campaign addresses. A municipal utility would give Cedar Rapids residents direct local control over the energy decisions that affect their lives, including whether to build new gas infrastructure to serve data centers.
+                    </div>
+                </div>
+
+                <div style="background: #e8f5ed; border: 2px solid #1a6b3a; border-radius: 8px; padding: 1.5rem; margin-top: 3rem; text-align: center;">
+                    <p style="font-size: 1.1rem; color: #1a3d1a; margin-bottom: 1rem; font-weight: 600;">Have a question we didn't answer?</p>
+                    <a href="contact.html" class="cta-button">Ask Us →</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 0.5rem;">Our Power Our Choice, Cedar Rapids, Iowa</p>
+            <p>A grassroots campaign to bring a municipal electric utility referendum to the 2027 ballot.</p>
+            <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">
+                <a href="contact.html">Contact us</a> &nbsp;|&nbsp;
+                <a href="index.html">Home</a> &nbsp;|&nbsp;
+                <a href="petition.html">Sign the Petition</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(btn) {
+            const item = btn.closest('.faq-item');
+            item.classList.toggle('open');
+        }
+    </script>
+
+    <script src="ticker.js"></script>
+</body>
+</html>

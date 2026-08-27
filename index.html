@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our Power Our Choice, Cedar Rapids residents working to create a municipal electric utility and take back control of our energy future.">
+    <title>Our Power Our Choice | Cedar Rapids Municipal Utility Campaign</title>
+    <link rel="icon" type="image/png" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ─── HEADER / NAV ─────────────────────────────────────── -->
+    <header>
+        <nav>
+            <div class="container">
+                <h1><a href="index.html" style="color: white; text-decoration: none;">Our Power. Our Choice.</a></h1>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="petition.html">Petition</a></li>
+                    <li><a href="data.html">The Data</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Get Involved</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <script src="mobile-menu.js"></script>
+
+    <!-- ─── EVENT TICKER ─────────────────────────────────────── -->
+    <div class="event-ticker-bar">
+        <div class="container">
+            <h3>📅 Upcoming Events</h3>
+            <div class="ticker-container">
+                <div class="ticker-inner" id="eventTicker">
+                    <div class="ticker-item"><strong>Sat Sep 6</strong>, Petition Launch at NewBo City Market, 8 AM–Noon</div>
+                    <div class="ticker-item"><strong>Thu Sep 18</strong>, Town Hall: What Is a Municipal Utility? | CR Public Library, 6:30 PM</div>
+                    <div class="ticker-item"><strong>Sat Sep 27</strong>, Tabling at Czech Village Farmers Market, 8 AM–Noon</div>
+                    <div class="ticker-item"><strong>Wed Oct 8</strong>, Neighborhood Canvass: Wellington Heights, 4–7 PM</div>
+                    <div class="ticker-item"><strong>Thu Oct 23</strong>, Town Hall: The Numbers | Coe College, 6:30 PM</div>
+                </div>
+            </div>
+            <a href="events.html" class="ticker-view-all">View Full Events Calendar →</a>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- ─── HERO ─────────────────────────────────────────── -->
+        <section class="hero-image">
+            <div class="hero-overlay">
+                <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 3rem; padding: 2.5rem 1rem; flex-wrap: wrap;">
+
+                    <!-- Left: Text -->
+                    <div style="flex: 1; min-width: 300px; color: white;">
+                        <h2 style="color: white; font-size: 2.6rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">
+                            Cedar Rapids Deserves<br>Energy That Works <em>For Us</em>
+                        </h2>
+                        <p style="font-size: 1.2rem; line-height: 1.7; margin-bottom: 1rem;">
+                            Alliant Energy is an investor-owned monopoly. Their obligation is to shareholders, not to us. Cities like Ames, Cedar Falls, and Iowa City run their own electric utilities and pay significantly less while delivering more reliable power.
+                        </p>
+                        <p style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 1rem;">
+                            We're building a campaign to bring a <strong>Cedar Rapids Municipal Utility</strong> to the 2027 ballot. But first we need data, community support, and your signature.
+                        </p>
+                        <p style="font-size: 1.25rem; font-weight: bold; margin-top: 0.5rem;">
+                            Take back control. <span style="position: relative; display: inline-block;">Our Power. Our Choice.<svg style="position: absolute; left: 0; bottom: -8px; width: 100%; height: 12px; overflow: visible;" viewBox="0 0 220 12" preserveAspectRatio="none"><path d="M0,8 Q55,2 110,8 T220,8" stroke="#f5c842" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span>
+                        </p>
+                    </div>
+
+                    <!-- Right: Action buttons -->
+                    <div style="flex: 0 0 auto; min-width: 280px; display: flex; flex-direction: column; gap: 1rem;">
+                        <a href="petition.html" class="hero-action-btn">📝 Sign the Petition</a>
+                        <a href="data.html" class="hero-action-btn">📊 See the Data</a>
+                        <a href="faq.html" class="hero-action-btn">❓ How Would This Work?</a>
+                        <a href="timeline.html" class="hero-action-btn">📅 2027 Ballot Roadmap</a>
+                        <a href="contact.html" class="hero-action-btn">🤝 Get Involved</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── STAT STRIP ────────────────────────────────────── -->
+        <section class="section">
+            <div class="container">
+                <div class="stat-strip">
+                    <div class="stat-card">
+                        <div class="stat-number">~14%</div>
+                        <div class="stat-label">lower average residential rates at Iowa municipal utilities vs. Alliant Energy</div>
+                        <div class="stat-source">Iowa Utilities Board rate comparisons, 2023</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">$216M</div>
+                        <div class="stat-label">billed to Iowa customers for a plant Alliant shut down in 2023, still collecting through 2037</div>
+                        <div class="stat-source">Alliant / IPL Iowa Utilities Commission filings, 2023–2025</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3 of 5</div>
+                        <div class="stat-label">largest Iowa cities, Ames, Cedar Falls, Iowa City, already run their own municipal utilities</div>
+                        <div class="stat-source">Iowa Association of Municipal Utilities</div>
+                    </div>
+                </div>
+
+                <!-- Who Are We -->
+                <div style="background: white; padding: 2.5rem; border-radius: 8px; border-left: 5px solid #1a6b3a; box-shadow: 0 2px 10px rgba(0,0,0,0.08); max-width: 900px; margin: 0 auto;">
+                    <h2 style="color: #1a6b3a; margin-bottom: 1rem;">What Is a Municipal Utility?</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
+                        A municipal electric utility is owned and operated by the city, meaning <strong>by the residents</strong>. Instead of profits flowing to out-of-state shareholders, revenue stays local to fund rate stability, infrastructure, and community priorities.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
+                        Cedar Falls Utilities, Ames Electric, and Iowa City Power & Light have all operated as munis for decades. Their customers consistently pay less and experience fewer prolonged outages than Alliant customers in Iowa.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 0;">
+                        This campaign is the first step: gather community support, compile the evidence, and get a municipal utility referendum on the <strong>2027 Cedar Rapids ballot</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── WHY IT MATTERS ────────────────────────────────── -->
+        <section class="section alt-bg">
+            <div class="container">
+                <h2 class="centered">Why This Matters for Cedar Rapids</h2>
+                <div class="concerns-grid">
+
+                    <a href="data.html#rates" style="text-decoration: none; color: inherit;">
+                        <div class="concern-card">
+                            <div class="card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="1" x2="12" y2="23"/>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                </svg>
+                            </div>
+                            <h3>Lower Rates</h3>
+                            <ul>
+                                <li>Iowa munis average ~14% less than Alliant residential rates</li>
+                                <li>No shareholder dividend obligation built into your bill</li>
+                                <li><strong>Savings stay in Cedar Rapids</strong></li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <a href="data.html#reliability" style="text-decoration: none; color: inherit;">
+                        <div class="concern-card">
+                            <div class="card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                                </svg>
+                            </div>
+                            <h3>Better Reliability</h3>
+                            <ul>
+                                <li>Cedar Falls Utilities: outage duration consistently shorter than state average</li>
+                                <li>Local control means faster storm response</li>
+                                <li><strong>Crews accountable to residents, not earnings calls</strong></li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <a href="data.html#accountability" style="text-decoration: none; color: inherit;">
+                        <div class="concern-card">
+                            <div class="card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <h3>Local Accountability</h3>
+                            <ul>
+                                <li>Elected or appointed local board, not a distant corporate HQ</li>
+                                <li>Rate decisions made in Cedar Rapids, not Madison, WI</li>
+                                <li><strong>You vote for the people who set your rates</strong></li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <a href="data.html#future" style="text-decoration: none; color: inherit;">
+                        <div class="concern-card">
+                            <div class="card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <h3>Control Our Future</h3>
+                            <ul>
+                                <li>Set our own renewable energy goals, not Alliant's timeline</li>
+                                <li>Decide locally whether to support data center load growth</li>
+                                <li><strong>Reinvest profits into grid modernization and efficiency programs</strong></li>
+                            </ul>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── ALLIANT TRACK RECORD ──────────────────────────── -->
+        <section class="section">
+            <div class="container">
+                <h2 class="centered">Alliant's Track Record in Iowa</h2>
+                <p style="text-align: center; font-size: 1.1rem; color: #555; max-width: 700px; margin: 0 auto 2rem;">
+                    These are facts on the public record, Iowa Utilities Board filings, rate cases, and state data.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+
+                    <div class="info-card">
+                        <h3>💸 Rate Increases</h3>
+                        <p>Alliant has filed multiple rate increase requests with the Iowa Utilities Board in recent years, with approved increases compounding costs for residential customers well above inflation.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🏭 Stranded Asset Costs</h3>
+                        <p>Iowa customers are still paying $216M for the Sixth Street Generating Station that Alliant shut down in 2023, and will continue paying until 2037. You pay for their business decisions.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>📊 Shareholder Obligation</h3>
+                        <p>Alliant Energy (NASDAQ: LNT) is legally obligated to maximize returns for shareholders. When your interests conflict with shareholder value, you already know who wins.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🏗️ Data Center Buildout</h3>
+                        <p>The proposed Morgan Valley gas plant is primarily intended to serve future data centers, not Cedar Rapids residents. But residential customers share the rate risk of that infrastructure.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── CTA SECTION ───────────────────────────────────── -->
+        <section class="section alt-bg" id="action">
+            <div class="container">
+                <div style="background: white; padding: 3rem; border-radius: 8px; border-left: 5px solid #1a6b3a; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; max-width: 900px; margin: 0 auto;">
+                    <h2 style="color: #1a6b3a; text-align: center;">MAKE YOUR VOICE HEARD</h2>
+                    <h3 style="color: #333; margin-bottom: 2rem; text-align: center; font-size: 1.5rem;">Cedar Rapids Residents Deserve a Choice</h3>
+                    <div class="cta-buttons">
+                        <a href="petition.html" class="cta-button">Sign the Petition</a>
+                        <a href="data.html" class="cta-button">View the Data</a>
+                        <a href="contact.html" class="cta-button">Get Involved</a>
+                    </div>
+                    <p style="color: #333; font-size: 1.2rem; margin-top: 2rem; font-weight: bold; text-align: center;">
+                        Every signature moves us one step closer to the 2027 ballot.<br>Our Power. Our Choice.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── COMPARABLE CITIES STRIP ───────────────────────── -->
+        <section class="section">
+            <div class="container">
+                <h2 class="centered">Iowa Cities That Already Run Their Own Utilities</h2>
+                <p style="text-align: center; color: #555; font-size: 1.05rem; margin-bottom: 2rem;">These aren't experiments, they've been running successfully for decades.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center;">
+
+                    <div style="background: #e8f5ed; border: 2px solid #1a6b3a; border-radius: 8px; padding: 1.5rem;">
+                        <div style="font-size: 1.8rem; font-weight: 700; color: #1a6b3a;">Cedar Falls</div>
+                        <div style="font-size: 0.95rem; color: #555; margin-top: 0.5rem;">Cedar Falls Utilities, consistently among Iowa's lowest residential rates</div>
+                    </div>
+
+                    <div style="background: #e8f5ed; border: 2px solid #1a6b3a; border-radius: 8px; padding: 1.5rem;">
+                        <div style="font-size: 1.8rem; font-weight: 700; color: #1a6b3a;">Ames</div>
+                        <div style="font-size: 0.95rem; color: #555; margin-top: 0.5rem;">Ames Electric Services, city-owned since 1890, nationally recognized for reliability</div>
+                    </div>
+
+                    <div style="background: #e8f5ed; border: 2px solid #1a6b3a; border-radius: 8px; padding: 1.5rem;">
+                        <div style="font-size: 1.8rem; font-weight: 700; color: #1a6b3a;">Iowa City</div>
+                        <div style="font-size: 0.95rem; color: #555; margin-top: 0.5rem;">Iowa City utilities, local control, local investment, local accountability</div>
+                    </div>
+
+                    <div style="background: #e8f5ed; border: 2px solid #1a6b3a; border-radius: 8px; padding: 1.5rem;">
+                        <div style="font-size: 1.8rem; font-weight: 700; color: #1a6b3a;">Muscatine</div>
+                        <div style="font-size: 0.95rem; color: #555; margin-top: 0.5rem;">Muscatine Power & Water, local muni with rates well below investor-owned peers</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ─── FOOTER ────────────────────────────────────────────── -->
+    <footer>
+        <div class="container">
+            <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 0.5rem;">Our Power Our Choice, Cedar Rapids, Iowa</p>
+            <p>A grassroots campaign to bring a municipal electric utility referendum to the 2027 ballot.</p>
+            <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">
+                Questions? <a href="contact.html">Contact us</a> &nbsp;|&nbsp;
+                <a href="petition.html">Sign the Petition</a> &nbsp;|&nbsp;
+                <a href="data.html">The Data</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="ticker.js"></script>
+</body>
+</html>
