@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Materials | Our Power Our Choice</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Arial', 'Helvetica Neue', sans-serif;
+            background: #f4f7f4;
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── HEADER ── */
+        header {
+            background: #1a6b3a;
+            color: white;
+            padding: 0;
+        }
+
+        .header-inner {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 28px 24px 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 6px;
+        }
+
+        .header-inner .campaign {
+            font-size: 36px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        .header-inner .campaign span {
+            color: #f5c842;
+        }
+
+        .header-inner .subtitle {
+            font-size: 13px;
+            color: #c8e6d0;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-top: 2px;
+        }
+
+        /* ── TAGLINE BAR ── */
+        .tagline-bar {
+            background: #f5c842;
+            color: #1a3d1a;
+            text-align: center;
+            padding: 10px 24px;
+            font-size: 15px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        /* ── MAIN ── */
+        main {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 40px 24px 60px;
+            flex: 1;
+            width: 100%;
+        }
+
+        /* ── WEBSITE LINK BANNER ── */
+        .website-banner {
+            background: #1a6b3a;
+            border-radius: 10px;
+            padding: 20px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .website-banner-text {
+            color: white;
+        }
+
+        .website-banner-text .wb-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #a8d8b4;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .website-banner-text .wb-url {
+            font-size: 22px;
+            font-weight: 900;
+            color: white;
+        }
+
+        .website-banner-text .wb-desc {
+            font-size: 12px;
+            color: #c8e6d0;
+            margin-top: 4px;
+        }
+
+        .website-banner-link {
+            background: #f5c842;
+            color: #1a3d1a;
+            font-size: 14px;
+            font-weight: 900;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: transform 0.15s, box-shadow 0.15s;
+            flex-shrink: 0;
+        }
+        .website-banner-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+        }
+
+        /* ── SECTION HEADING ── */
+        .section-heading {
+            font-size: 11px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #1a6b3a;
+            border-bottom: 2px solid #1a6b3a;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* ── PRINT CARDS GRID ── */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 48px;
+        }
+
+        .print-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.15s, box-shadow 0.15s;
+            border: 1px solid #e0ece4;
+        }
+        .print-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+        }
+
+        /* Card color bar */
+        .card-bar {
+            height: 6px;
+            background: #1a6b3a;
+            flex-shrink: 0;
+        }
+        .card-bar.bw {
+            background: #333;
+        }
+
+        /* Card thumbnail preview */
+        .card-preview {
+            background: #e8f5ed;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100px;
+            flex-shrink: 0;
+            position: relative;
+        }
+        .card-preview.bw-preview {
+            background: #e8e8e8;
+        }
+
+        .preview-mock {
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+            display: flex;
+            flex-direction: column;
+            width: 140px;
+        }
+        .mock-header {
+            background: #1a6b3a;
+            padding: 5px 8px;
+            font-size: 7px;
+            font-weight: 900;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            text-align: center;
+        }
+        .mock-header.bw { background: #111; }
+        .mock-tagline {
+            background: #f5c842;
+            padding: 3px 6px;
+            font-size: 6px;
+            font-weight: 700;
+            color: #1a3d1a;
+            text-align: center;
+        }
+        .mock-tagline.bw {
+            background: #333;
+            color: white;
+        }
+        .mock-body {
+            background: white;
+            padding: 6px 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        .mock-line {
+            height: 4px;
+            background: #c8e6d0;
+            border-radius: 2px;
+        }
+        .mock-line.bw { background: #ccc; }
+        .mock-line.dark { background: #1a6b3a; width: 60%; }
+        .mock-line.dark.bw { background: #555; }
+        .mock-line.short { width: 70%; }
+        .mock-line.shorter { width: 50%; }
+        .mock-footer {
+            background: #1a3d1a;
+            padding: 4px 8px;
+            display: flex;
+            gap: 3px;
+        }
+        .mock-footer.bw { background: #222; }
+        .mock-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #a8d8b4;
+            flex-shrink: 0;
+        }
+        .mock-dot.bw { background: #777; }
+
+        /* Badge */
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #1a6b3a;
+            color: white;
+            font-size: 9px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        .card-badge.bw-badge {
+            background: #333;
+        }
+        .card-badge.postcard-badge {
+            background: #1a3d1a;
+        }
+
+        /* Card content */
+        .card-content {
+            padding: 18px 20px 16px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 900;
+            color: #111;
+            line-height: 1.2;
+        }
+
+        .card-desc {
+            font-size: 12px;
+            color: #555;
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .meta-tag {
+            background: #e8f5ed;
+            color: #1a6b3a;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        .meta-tag.bw-tag {
+            background: #eee;
+            color: #333;
+        }
+
+        .card-link {
+            display: block;
+            background: #1a6b3a;
+            color: white;
+            text-align: center;
+            padding: 11px 16px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 6px;
+            transition: background 0.15s;
+        }
+        .card-link:hover { background: #145530; }
+        .card-link.bw-link {
+            background: #222;
+        }
+        .card-link.bw-link:hover { background: #000; }
+
+        /* ── USAGE NOTES ── */
+        .usage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+        }
+
+        .usage-card {
+            background: white;
+            border-radius: 8px;
+            padding: 16px 18px;
+            border-left: 4px solid #1a6b3a;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+        }
+
+        .usage-card h4 {
+            font-size: 12px;
+            font-weight: 900;
+            color: #1a6b3a;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin-bottom: 6px;
+        }
+
+        .usage-card p {
+            font-size: 12px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #1a3d1a;
+            color: #aaa;
+            text-align: center;
+            padding: 16px 24px;
+            font-size: 11px;
+            line-height: 1.7;
+        }
+        footer strong { color: white; }
+        footer a { color: #a8d8b4; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="campaign">Our Power<span>.</span> Our Choice<span>.</span></div>
+            <div class="subtitle">Cedar Rapids Campaign for a Municipal Electric Utility</div>
+        </div>
+    </header>
+
+    <div class="tagline-bar">
+        Alliant Energy Is Overcharging You — Cedar Rapids Can Do Better
+    </div>
+
+    <main>
+
+        <!-- Website link -->
+        <div class="website-banner">
+            <div class="website-banner-text">
+                <div class="wb-label">Campaign Website</div>
+                <div class="wb-url">ourpowerourchoice.com</div>
+                <div class="wb-desc">Petition, data, events, FAQ, and how to get involved</div>
+            </div>
+            <a href="https://ourpowerourchoice.com" target="_blank" rel="noopener" class="website-banner-link">
+                Visit the Website →
+            </a>
+        </div>
+
+        <!-- Print materials -->
+        <div class="section-heading">Print Materials — Hand Delivery</div>
+
+        <div class="cards-grid">
+
+            <!-- Postcard -->
+            <div class="print-card">
+                <div class="card-bar"></div>
+                <div class="card-preview">
+                    <span class="card-badge postcard-badge">6" × 4" · 2 sides</span>
+                    <div class="preview-mock">
+                        <div class="mock-header">Our Power. Our Choice.</div>
+                        <div class="mock-tagline">Alliant Is Overcharging You</div>
+                        <div class="mock-body">
+                            <div class="mock-line dark"></div>
+                            <div class="mock-line"></div>
+                            <div class="mock-line short"></div>
+                            <div class="mock-line shorter"></div>
+                            <div class="mock-line"></div>
+                        </div>
+                        <div class="mock-footer">
+                            <div class="mock-dot"></div>
+                            <div class="mock-dot"></div>
+                            <div class="mock-dot"></div>
+                            <div class="mock-dot"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Postcard<br>(Front &amp; Back)</div>
+                    <div class="card-desc">
+                        Standard 6" × 4" hand-delivery postcard. Front covers the Alliant problem, Iowa rate comparisons, and petition CTA. Back has action steps and contact info.
+                    </div>
+                    <div class="card-meta">
+                        <span class="meta-tag">Color</span>
+                        <span class="meta-tag">6" × 4"</span>
+                        <span class="meta-tag">Cardstock</span>
+                    </div>
+                    <a href="print-postcard.html" target="_blank" class="card-link">Open / Print →</a>
+                </div>
+            </div>
+
+            <!-- Leave-Behind Color -->
+            <div class="print-card">
+                <div class="card-bar"></div>
+                <div class="card-preview">
+                    <span class="card-badge">5.5" × 8.5" · 2 sides</span>
+                    <div class="preview-mock">
+                        <div class="mock-header">Our Power. Our Choice.</div>
+                        <div class="mock-tagline">Alliant Is Overcharging You</div>
+                        <div class="mock-body">
+                            <div class="mock-line dark"></div>
+                            <div class="mock-line"></div>
+                            <div class="mock-line"></div>
+                            <div class="mock-line short"></div>
+                            <div class="mock-line"></div>
+                            <div class="mock-line shorter"></div>
+                            <div class="mock-line"></div>
+                        </div>
+                        <div class="mock-footer">
+                            <div class="mock-dot"></div>
+                            <div class="mock-dot"></div>
+                            <div class="mock-dot"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Leave-Behind Sheet<br>(Color)</div>
+                    <div class="card-desc">
+                        Half-sheet 5.5" × 8.5". Print two-up on letter paper and cut. Front: The problem, stats, rate table. Back: How it works, action steps, contact.
+                    </div>
+                    <div class="card-meta">
+                        <span class="meta-tag">Color</span>
+                        <span class="meta-tag">5.5" × 8.5"</span>
+                        <span class="meta-tag">2-up on letter</span>
+                    </div>
+                    <a href="print-leave-behind.html" target="_blank" class="card-link">Open / Print →</a>
+                </div>
+            </div>
+
+            <!-- Leave-Behind B&W -->
+            <div class="print-card">
+                <div class="card-bar bw"></div>
+                <div class="card-preview bw-preview">
+                    <span class="card-badge bw-badge">5.5" × 8.5" · 2 sides</span>
+                    <div class="preview-mock">
+                        <div class="mock-header bw">Our Power. Our Choice.</div>
+                        <div class="mock-tagline bw">Alliant Is Overcharging You</div>
+                        <div class="mock-body">
+                            <div class="mock-line dark bw"></div>
+                            <div class="mock-line bw"></div>
+                            <div class="mock-line bw"></div>
+                            <div class="mock-line short bw"></div>
+                            <div class="mock-line bw"></div>
+                            <div class="mock-line shorter bw"></div>
+                            <div class="mock-line bw"></div>
+                        </div>
+                        <div class="mock-footer bw">
+                            <div class="mock-dot bw"></div>
+                            <div class="mock-dot bw"></div>
+                            <div class="mock-dot bw"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Leave-Behind Sheet<br>(Black &amp; White)</div>
+                    <div class="card-desc">
+                        Same content and layout as the color version, optimized for standard black-and-white printing. Same font sizes, full contrast. Print on any printer.
+                    </div>
+                    <div class="card-meta">
+                        <span class="meta-tag bw-tag">B&amp;W</span>
+                        <span class="meta-tag bw-tag">5.5" × 8.5"</span>
+                        <span class="meta-tag bw-tag">Any printer</span>
+                    </div>
+                    <a href="print-leave-behind-bw.html" target="_blank" class="card-link bw-link">Open / Print →</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Usage notes -->
+        <div class="section-heading">Printing &amp; Usage Notes</div>
+        <div class="usage-grid">
+            <div class="usage-card">
+                <h4>Postcard Stock</h4>
+                <p>Print on 80–100 lb cardstock. Print front and back duplex, or print separately and glue back-to-back. Color printing required.</p>
+            </div>
+            <div class="usage-card">
+                <h4>Leave-Behind (Color)</h4>
+                <p>Print two copies on one 8.5" × 11" sheet, landscape. Cut in half horizontally. 60–80 lb text stock recommended.</p>
+            </div>
+            <div class="usage-card">
+                <h4>Leave-Behind (B&amp;W)</h4>
+                <p>Any standard laser or inkjet printer. Plain 20 lb copy paper works fine. Print two-up landscape and cut in half.</p>
+            </div>
+            <div class="usage-card">
+                <h4>QR Codes</h4>
+                <p>Replace the QR placeholder boxes with an actual generated QR code pointing to ourpowerourchoice.com before final printing.</p>
+            </div>
+            <div class="usage-card">
+                <h4>Scale Setting</h4>
+                <p>In your browser print dialog, set scale to 100% (no scaling / actual size) to maintain correct physical dimensions.</p>
+            </div>
+            <div class="usage-card">
+                <h4>Contact &amp; URLs</h4>
+                <p>Update email and website URLs in each file before printing if your final domain or contact info differs.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <strong>Our Power Our Choice</strong> — Cedar Rapids, Iowa<br>
+        A grassroots campaign to bring a municipal utility referendum to the 2027 ballot.<br>
+        <a href="index.html">← Back to Campaign Website</a>
+    </footer>
+
+</body>
+</html>
