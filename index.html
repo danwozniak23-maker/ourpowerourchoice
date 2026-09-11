@@ -97,11 +97,64 @@
         <!-- ─── STAT STRIP ────────────────────────────────────── -->
         <section class="section">
             <div class="container">
+
+                <!-- Rate Comparison Table -->
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="color: #1a6b3a; text-align: center; margin-bottom: 0.5rem;">What Cedar Rapids Ratepayers Are Overpaying</h2>
+                    <p style="text-align: center; color: #555; font-size: 1rem; margin-bottom: 1.5rem;">Average residential customer, 2023 data — Iowa Utilities Commission Annual Report Filings via <a href="https://www.cleanenergydistricts.org/wp-content/uploads/2024/12/2023-Electric-CEDI-12-20-24-Residential-Savings.pdf" target="_blank" rel="noopener" style="color: #1a6b3a;">Clean Energy Districts of Iowa</a></p>
+
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 1rem; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+                            <thead>
+                                <tr style="background: #1a3d1a; color: white;">
+                                    <th style="padding: 0.85rem 1rem; text-align: left; font-weight: 700;">Utility</th>
+                                    <th style="padding: 0.85rem 1rem; text-align: center; font-weight: 700;">Type</th>
+                                    <th style="padding: 0.85rem 1rem; text-align: right; font-weight: 700;">¢ / kWh</th>
+                                    <th style="padding: 0.85rem 1rem; text-align: right; font-weight: 700;">Annual Cost</th>
+                                    <th style="padding: 0.85rem 1rem; text-align: right; font-weight: 700;">Savings vs. Alliant</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="background: #fff3f3; border-bottom: 1px solid #eee;">
+                                    <td style="padding: 0.85rem 1rem; font-weight: 700; color: #b00;">Alliant Energy (Cedar Rapids)</td>
+                                    <td style="padding: 0.85rem 1rem; text-align: center; color: #777; font-size: 0.9rem;">Investor-Owned</td>
+                                    <td style="padding: 0.85rem 1rem; text-align: right; font-weight: 900; color: #b00; font-size: 1.1rem;">17.86¢</td>
+                                    <td style="padding: 0.85rem 1rem; text-align: right; font-weight: 700; color: #b00;">$1,581.68</td>
+                                    <td style="padding: 0.85rem 1rem; text-align: right; color: #999;">—</td>
+                                </tr>
+                                <tr style="background: #e8f5ed; border-bottom: 1px solid #d4eadb;">
+                                    <td style="padding: 0.85rem 1rem; font-weight: 700; color: #1a6b3a;">Cedar Falls Utilities</td>
+                                    <td style="padding: 0.85rem 1rem; text-align: center; color: #777; font-size: 0.9rem;">Municipal</td>
+                                    <td style="padding: 0.85rem 1rem; text-align: right; font-weight: 900; color: #1a6b3a; font-size: 1.1rem;">10.01¢</td>
+                                    <td style="padding: 0.85rem 1rem; text-align: right; font-weight: 700; color: #1a6b3a;">$886.54</td>
+                                    <td style="padding: 0.85rem 1rem; text-align: right; font-weight: 700; color: #1a6b3a;">$695/yr &nbsp;<strong style="font-size:1rem;">(44% less)</strong></td>
+                                </tr>
+                                <tr style="background: #f0f9f3; border-bottom: 1px solid #d4eadb;">
+                                    <td style="padding: 0.85rem 1rem; font-weight: 700; color: #1a6b3a;">MidAmerican Energy</td>
+                                    <td style="padding: 0.85rem 1rem; text-align: center; color: #777; font-size: 0.9rem;">Investor-Owned</td>
+                                    <td style="padding: 0.85rem 1rem; text-align: right; font-weight: 900; color: #1a6b3a; font-size: 1.1rem;">11.00¢</td>
+                                    <td style="padding: 0.85rem 1rem; text-align: right; font-weight: 700; color: #1a6b3a;">$974.16</td>
+                                    <td style="padding: 0.85rem 1rem; text-align: right; font-weight: 700; color: #1a6b3a;">$608/yr &nbsp;<strong style="font-size:1rem;">(38% less)</strong></td>
+                                </tr>
+                                <tr style="background: #f0f9f3;">
+                                    <td style="padding: 0.85rem 1rem; font-weight: 700; color: #1a6b3a;">Linn County REC</td>
+                                    <td style="padding: 0.85rem 1rem; text-align: center; color: #777; font-size: 0.9rem;">Cooperative</td>
+                                    <td style="padding: 0.85rem 1rem; text-align: right; font-weight: 900; color: #1a6b3a; font-size: 1.1rem;">10.80¢</td>
+                                    <td style="padding: 0.85rem 1rem; text-align: right; font-weight: 700; color: #1a6b3a;">$956.86</td>
+                                    <td style="padding: 0.85rem 1rem; text-align: right; font-weight: 700; color: #1a6b3a;">$625/yr &nbsp;<strong style="font-size:1rem;">(40% less)</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="text-align: center; font-size: 0.9rem; color: #888; margin-top: 0.75rem; font-style: italic;">Even the other investor-owned utility in Iowa charges 38% less than Alliant. Cedar Rapids ratepayers are at the bottom of the list.</p>
+                </div>
+
+                <!-- Keep the $216M stat and a cleaner third stat -->
                 <div class="stat-strip">
                     <div class="stat-card">
-                        <div class="stat-number">~14%</div>
-                        <div class="stat-label">lower average residential rates at Iowa municipal utilities vs. Alliant Energy</div>
-                        <div class="stat-source">Iowa Utilities Board rate comparisons, 2023</div>
+                        <div class="stat-number">44%</div>
+                        <div class="stat-label">less per year Cedar Falls residents pay vs. Alliant — $695 in annual savings for the average household</div>
+                        <div class="stat-source">Clean Energy Districts of Iowa, 2023 (Iowa Utilities Commission data)</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-number">$216M</div>
@@ -109,9 +162,9 @@
                         <div class="stat-source">Alliant / IPL Iowa Utilities Commission filings, 2023–2025</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">3 of 5</div>
-                        <div class="stat-label">largest Iowa cities, Ames, Cedar Falls, Iowa City, already run their own municipal utilities</div>
-                        <div class="stat-source">Iowa Association of Municipal Utilities</div>
+                        <div class="stat-number">17.86¢</div>
+                        <div class="stat-label">per kWh Alliant charges — vs. 10.01¢ at Cedar Falls Utilities, the lowest-cost utility serving Cedar Rapids' neighbors</div>
+                        <div class="stat-source">Clean Energy Districts of Iowa, 2023 (Iowa Utilities Commission data)</div>
                     </div>
                 </div>
 
@@ -122,7 +175,7 @@
                         A municipal electric utility is owned and operated by the city, meaning <strong>by the residents</strong>. Instead of profits flowing to out-of-state shareholders, revenue stays local to fund rate stability, infrastructure, and community priorities.
                     </p>
                     <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
-                        Cedar Falls Utilities, Ames Electric, and Iowa City Power & Light have all operated as munis for decades. Their customers consistently pay less and experience fewer prolonged outages than Alliant customers in Iowa.
+                        Cedar Falls Utilities, Ames Electric, and Muscatine Power & Water have all operated as munis for decades. Their customers consistently pay less and experience fewer prolonged outages than Alliant customers in Iowa.
                     </p>
                     <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 0;">
                         This campaign is the first step: gather community support, compile the evidence, and get a municipal utility referendum on the <strong>2027 Cedar Rapids ballot</strong>.
