@@ -37,14 +37,24 @@
             <h3>📅 Upcoming Events</h3>
             <div class="ticker-container">
                 <div class="ticker-inner" id="eventTicker">
-                    <div class="ticker-item"><strong>Sat Sep 6</strong>, Petition Launch at NewBo City Market, 8 AM–Noon</div>
-                    <div class="ticker-item"><strong>Thu Sep 18</strong>, Town Hall: What Is a Municipal Utility? | CR Public Library, 6:30 PM</div>
-                    <div class="ticker-item"><strong>Sat Sep 27</strong>, Tabling at Czech Village Farmers Market, 8 AM–Noon</div>
-                    <div class="ticker-item"><strong>Wed Oct 8</strong>, Neighborhood Canvass: Wellington Heights, 4–7 PM</div>
-                    <div class="ticker-item"><strong>Thu Oct 23</strong>, Town Hall: The Numbers | Coe College, 6:30 PM</div>
+                    <!-- Populated dynamically from OurPower_Events Google Sheet tab -->
                 </div>
             </div>
             <a href="events.html" class="ticker-view-all">View Full Events Calendar →</a>
+        </div>
+    </div>
+
+    <!-- ─── ALERT BANNER (driven by OurPower_Banner tab) ────── -->
+    <div id="opoc-alert-banner" style="display:none; background:#e8f5ed; border-top:4px solid #1a6b3a; border-bottom:4px solid #1a6b3a; padding:1.5rem 0;">
+        <div class="container">
+            <div style="display:flex; align-items:flex-start; gap:1rem; flex-wrap:wrap;">
+                <div style="font-size:2rem; line-height:1;">📢</div>
+                <div style="flex:1; min-width:260px;">
+                    <p style="font-weight:700; font-size:1.15rem; color:#1a6b3a; margin-bottom:0.4rem;" id="banner-title"></p>
+                    <p style="font-size:1rem; color:#333; margin-bottom:0.5rem;" id="banner-body"></p>
+                    <p style="font-size:0.95rem; color:#555; margin:0;" id="banner-where"></p>
+                </div>
+            </div>
         </div>
     </div>
 
