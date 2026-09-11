@@ -28,11 +28,7 @@ function csvToRows(csv) {
 async function initTicker() {
     try {
         const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=OurPower_Events`;
-        console.log('[OPOC Ticker] Fetching:', url);
-        const text = await (await fetch(url)).text();
-        console.log('[OPOC Ticker] Raw response (first 300 chars):', text.slice(0, 300));
-        const rows = csvToRows(text);
-        console.log('[OPOC Ticker] Parsed rows:', rows);
+        const rows = csvToRows(await (await fetch(url)).text());
 
         const today = new Date(); today.setHours(0, 0, 0, 0);
         const upcoming = rows.filter(r => {
@@ -40,7 +36,6 @@ async function initTicker() {
             const [y, m, d] = r[0].split('-').map(Number);
             return new Date(y, m - 1, d) >= today;
         });
-        console.log('[OPOC Ticker] Upcoming events:', upcoming);
 
         const ticker = document.getElementById('eventTicker');
         if (!ticker) return;
