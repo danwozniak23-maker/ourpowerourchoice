@@ -160,11 +160,7 @@
                         <p style="font-size: 1.05rem; line-height: 1.8;">
                             Have a question? Use the same form, just describe your question in the message field.
                         </p>
-                        <div style="margin-top: 2rem; padding: 1.25rem; background: #e8f5ed; border-radius: 8px; border-left: 4px solid #1a6b3a;">
-                            <p style="margin: 0; font-size: 0.95rem; color: #333;">
-                                <strong>Note:</strong> This site is currently offline / in development. Once the campaign goes live, this form will connect to a real submission system. For now, please <strong>note your interest</strong> and we'll set up real contact shortly.
-                            </p>
-                        </div>
+
                     </div>
 
                     <div>
@@ -178,26 +174,12 @@
                                 <input type="email" id="email" name="email" required placeholder="you@example.com">
                             </div>
                             <div class="form-group">
-                                <label for="address">Cedar Rapids Address</label>
-                                <input type="text" id="address" name="address" placeholder="Street address (to confirm you're a CR resident)">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="319-555-0100">
                             </div>
                             <div class="form-group">
-                                <label for="interest">How Would You Like to Help?</label>
-                                <select id="interest" name="interest">
-                                    <option value="">, Select an option ,</option>
-                                    <option value="petition">Collect petition signatures</option>
-                                    <option value="research">Research / data compilation</option>
-                                    <option value="outreach">Community outreach</option>
-                                    <option value="digital">Website / social media</option>
-                                    <option value="legal">Legal / financial professional</option>
-                                    <option value="donate">Financial contribution</option>
-                                    <option value="question">I have a question</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message / Notes</label>
-                                <textarea id="message" name="message" placeholder="Tell us more about how you'd like to help, or ask us a question..."></textarea>
+                                <label for="message">Message / How You'd Like to Help</label>
+                                <textarea id="message" name="message" placeholder="Tell us how you'd like to help, or ask us a question..."></textarea>
                             </div>
                             <button type="submit" class="submit-btn">Send Message →</button>
                             <div id="formSuccess" style="display: none; margin-top: 1rem; padding: 1rem; background: #e8f5ed; border-radius: 6px; color: #1a3d1a; font-weight: 600;">
@@ -230,19 +212,15 @@
                         </ul>
                     </div>
                     <div class="info-card">
-                        <h3>📬 Donate by Check</h3>
+                        <h3>📧 Donate by Form</h3>
                         <p style="margin-bottom: 0.5rem;">
-                            Make check payable to: <strong>[Organization Name TBD]</strong><br>
-                            Mail to: <strong>[Address TBD]</strong>
+                            Want to make a financial contribution? Use the contact form above and mention "donation" in your message. We'll reach out with details on how to contribute.
                         </p>
                         <p style="font-size: 0.85rem; color: #888; margin-bottom: 0;">
                             <em>We are in the process of establishing our organizational structure. Online donation links will be added once that is complete.</em>
                         </p>
                     </div>
                 </div>
-                <p style="text-align: center; font-size: 0.85rem; color: #999; margin-top: 2rem; font-style: italic;">
-                    This campaign is not currently a registered 501(c)(3). Please consult your tax professional regarding deductibility. Any unused funds will be donated to related causes.
-                </p>
             </div>
         </section>
 
@@ -263,10 +241,38 @@
     <script>
         function handleSubmit(e) {
             e.preventDefault();
-            // Placeholder, in production this would POST to a backend or form service
-            document.getElementById('contactForm').style.opacity = '0.5';
-            document.getElementById('contactForm').style.pointerEvents = 'none';
-            document.getElementById('formSuccess').style.display = 'block';
+            const btn = document.querySelector('.submit-btn');
+            const formSuccess = document.getElementById('formSuccess');
+            
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            formSuccess.style.display = 'none';
+            
+            const params = new URLSearchParams({
+                formType: 'ourpower_contact',
+                name: document.getElementById('name').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                message: document.getElementById('message').value.trim(),
+                timestamp: new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' })
+            });
+            
+            const FORM_URL = 'https://script.google.com/macros/s/AKfycbx9qefm4z0DfPSzOkv56ydvZ2QY-osCe4hOdYr-q3Oo7N56kcimtJnKkruyEcgEpNLRyQ/exec';
+            
+            fetch(FORM_URL, { 
+                method: 'POST', 
+                mode: 'no-cors', 
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, 
+                body: params.toString() 
+            }).then(() => {
+                formSuccess.style.display = 'block';
+                document.getElementById('contactForm').reset();
+            }).catch(() => {
+                alert('Something went wrong. Please email us directly.');
+            }).finally(() => {
+                btn.disabled = false;
+                btn.textContent = 'Send Message →';
+            });
         }
     </script>
 
