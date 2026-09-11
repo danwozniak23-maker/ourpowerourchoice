@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rate comparisons, reliability data, and case studies supporting a Cedar Rapids municipal electric utility.">
+    <title>The Data | Our Power Our Choice</title>
+    <link rel="icon" type="image/png" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="container">
+                <h1><a href="index.html" style="color: white; text-decoration: none;">Our Power. Our Choice.</a></h1>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="petition.html">Petition</a></li>
+                    <li><a href="data.html" class="active">The Data</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Get Involved</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <script src="mobile-menu.js"></script>
+
+    
+
+    <main>
+
+        <div class="page-hero">
+            <div class="container">
+                <h2>The Data</h2>
+                <p>Rate comparisons, reliability records, stranded cost history, and case studies from Iowa municipal utilities. All sourced from public records.</p>
+            </div>
+        </div>
+
+        <!-- Data disclaimer -->
+        <div class="callout-banner">
+            <div class="container">
+                <p>⚠️ &nbsp;This page will grow as we compile research. Data marked <strong>[PLACEHOLDER]</strong> needs verification, we are actively gathering primary sources. Sources are cited inline. If you have better data, <a href="contact.html" style="color: #1a6b3a;">contact us</a>.</p>
+            </div>
+        </div>
+
+        <!-- ─── RATES ────────────────────────────────────────── -->
+        <section class="section" id="rates">
+            <div class="container">
+                <h2>Residential Rate Comparison</h2>
+                <p style="font-size: 1.1rem; color: #555; margin-bottom: 1.5rem;">
+                    Iowa municipal utilities have historically charged less per kilowatt-hour than Alliant Energy (Iowa Power and Light) for residential customers. The table below compares average residential rates across Iowa utilities using Iowa Utilities Board data.
+                </p>
+
+                <div style="overflow-x: auto;">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Utility</th>
+                                <th>Type</th>
+                                <th>Avg. Residential Rate (¢/kWh)</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Alliant Energy (IPL)</strong></td>
+                                <td>Investor-Owned</td>
+                                <td>~12.5¢ <span class="badge">[PLACEHOLDER]</span></td>
+                                <td>Cedar Rapids area; subject to ongoing rate cases</td>
+                            </tr>
+                            <tr>
+                                <td class="highlight">Cedar Falls Utilities</td>
+                                <td>Municipal</td>
+                                <td>~10.8¢ <span class="badge">[PLACEHOLDER]</span></td>
+                                <td>Consistently among Iowa's lowest residential rates</td>
+                            </tr>
+                            <tr>
+                                <td class="highlight">Ames Electric Services</td>
+                                <td>Municipal</td>
+                                <td>~11.2¢ <span class="badge">[PLACEHOLDER]</span></td>
+                                <td>City-owned since 1890</td>
+                            </tr>
+                            <tr>
+                                <td class="highlight">Muscatine Power &amp; Water</td>
+                                <td>Municipal</td>
+                                <td>~10.4¢ <span class="badge">[PLACEHOLDER]</span></td>
+                                <td>Frequently cited as Iowa's lowest rates</td>
+                            </tr>
+                            <tr>
+                                <td class="highlight">Iowa City (MidAmerican/UI)</td>
+                                <td>Mixed</td>
+                                <td>~11.9¢ <span class="badge">[PLACEHOLDER]</span></td>
+                                <td>Served by MidAmerican; UI owns some generation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-card" style="margin-top: 1.5rem;">
+                    <h3>📎 Primary Sources Needed</h3>
+                    <p style="margin-bottom: 0.5rem;">We are compiling the following from Iowa Utilities Board filings and utility annual reports:</p>
+                    <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                        <li>IUB Annual Report on Electric Utility Rates (most recent year available)</li>
+                        <li>Alliant Energy (IPL) Iowa rate case filings, Docket No. RPU-2022-0001 and subsequent</li>
+                        <li>Cedar Falls Utilities Annual Report</li>
+                        <li>Ames Electric Annual Report</li>
+                        <li>EIA Form 861 (Annual Electric Power Industry Report), all Iowa utilities</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #e8f5ed; border-radius: 8px; border-left: 4px solid #1a6b3a;">
+                    <strong style="color: #1a6b3a;">What This Means for Cedar Rapids Households:</strong>
+                    <p style="margin-top: 0.5rem; margin-bottom: 0;">
+                        At an average Iowa household consumption of ~900 kWh/month, a 1.5¢/kWh savings equals <strong>$13.50/month or $162/year</strong> per household. Across Cedar Rapids' ~60,000 residential accounts, that's roughly <strong>$9.7 million per year staying in Cedar Rapids</strong> rather than flowing to shareholders. <span class="badge">[ESTIMATE, verify with actual rate data]</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── RELIABILITY ──────────────────────────────────── -->
+        <section class="section alt-bg" id="reliability">
+            <div class="container">
+                <h2>Reliability: Outage Data</h2>
+                <p style="font-size: 1.1rem; color: #555; margin-bottom: 1.5rem;">
+                    Utility reliability is measured by two standard metrics: SAIDI (average outage duration per customer per year, in minutes) and SAIFI (average number of outage events per customer per year). Lower numbers are better.
+                </p>
+
+                <div style="overflow-x: auto;">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Utility</th>
+                                <th>SAIDI (min/year)</th>
+                                <th>SAIFI (events/year)</th>
+                                <th>Source Year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Alliant Energy (IPL), Iowa</strong></td>
+                                <td>~180 min <span class="badge">[PLACEHOLDER]</span></td>
+                                <td>~1.4 <span class="badge">[PLACEHOLDER]</span></td>
+                                <td>EIA Form 861 [year TBD]</td>
+                            </tr>
+                            <tr>
+                                <td class="highlight">Cedar Falls Utilities</td>
+                                <td>~95 min <span class="badge">[PLACEHOLDER]</span></td>
+                                <td>~0.9 <span class="badge">[PLACEHOLDER]</span></td>
+                                <td>CFU Annual Report [year TBD]</td>
+                            </tr>
+                            <tr>
+                                <td class="highlight">Ames Electric</td>
+                                <td>~110 min <span class="badge">[PLACEHOLDER]</span></td>
+                                <td>~1.0 <span class="badge">[PLACEHOLDER]</span></td>
+                                <td>Ames Annual Report [year TBD]</td>
+                            </tr>
+                            <tr>
+                                <td>National Avg. (IOUs)</td>
+                                <td>~200 min</td>
+                                <td>~1.3</td>
+                                <td>EIA, 2022</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-card" style="margin-top: 1.5rem;">
+                    <h3>📎 Sources to Pull</h3>
+                    <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                        <li>EIA Form 861, Distribution System Reliability Data (annual, all utilities)</li>
+                        <li>Cedar Falls Utilities Annual Report, Reliability section</li>
+                        <li>Ames Electric Annual Report</li>
+                        <li>Iowa Utilities Board annual reliability reports</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── STRANDED COSTS ───────────────────────────────── -->
+        <section class="section" id="accountability">
+            <div class="container">
+                <h2>Alliant's Stranded Asset Cost Record in Iowa</h2>
+                <p style="font-size: 1.1rem; color: #555; margin-bottom: 1.5rem;">
+                    When a utility builds or buys an asset and then retires it early, those costs are often passed to ratepayers as "stranded costs", you pay for their business decisions long after the plant stops running.
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                    <div class="info-card">
+                        <h3>Sixth Street Generating Station</h3>
+                        <p>Alliant shut down the Sixth Street plant in Cedar Rapids in 2023 but continues to collect $216 million from Iowa customers through 2037. This was approved by the Iowa Utilities Board as part of a settlement in rate case proceedings.</p>
+                        <p style="font-size: 0.85rem; color: #888; margin-bottom: 0;"><em>Source: IUB Docket RPU-2023-XXXX [verify docket number]</em></p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Rate Case History</h3>
+                        <p>Alliant (IPL) has filed multiple general rate cases with the Iowa Utilities Board, each resulting in approved residential rate increases. Each increase compounds on previous ones. We are compiling the full rate case history.</p>
+                        <p style="font-size: 0.85rem; color: #888; margin-bottom: 0;"><em>Source: IUB rate case docket index [pending research]</em></p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Data Center Load Growth</h3>
+                        <p>The proposed Morgan Valley Energy Center is a 720 MW gas plant intended primarily to serve future data center growth in the Cedar Rapids area. Infrastructure costs to serve large commercial loads are often socialized across all residential ratepayers.</p>
+                        <p style="font-size: 0.85rem; color: #888; margin-bottom: 0;"><em>Source: Alliant / IUB filings; <a href="https://savemorganvalley.com" style="color: #1a6b3a;" target="_blank" rel="noopener">savemorganvalley.com</a></em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── CASE STUDIES ─────────────────────────────────── -->
+        <section class="section alt-bg" id="future">
+            <div class="container">
+                <h2>Iowa Municipal Utility Case Studies</h2>
+                <p style="font-size: 1.1rem; color: #555; margin-bottom: 2rem;">
+                    These cities made the same decision Cedar Rapids is now considering, and have been running successfully for decades.
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+
+                    <div class="concern-card">
+                        <h3 style="font-size: 1.2rem;">Cedar Falls Utilities</h3>
+                        <ul>
+                            <li>City-owned electric, gas, water, and broadband utility</li>
+                            <li>Consistently among Iowa's lowest residential electric rates</li>
+                            <li>Operates Cedar Falls Community TeleCom (broadband) alongside electric service</li>
+                            <li>Profits reinvested locally, no out-of-state shareholders</li>
+                            <li><strong>Population comparable to Cedar Rapids neighborhoods</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="concern-card">
+                        <h3 style="font-size: 1.2rem;">Ames Electric Services</h3>
+                        <ul>
+                            <li>City-owned since 1890, over 130 years of continuous municipal operation</li>
+                            <li>Nationally recognized for reliability and low rates</li>
+                            <li>Has led Iowa cities in renewable energy integration</li>
+                            <li>Governed by Ames City Council, local accountability</li>
+                            <li><strong>Iowa State University as anchor customer, similar to CR data center dynamic</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="concern-card">
+                        <h3 style="font-size: 1.2rem;">Muscatine Power &amp; Water</h3>
+                        <ul>
+                            <li>Frequently cited as Iowa's lowest residential electric rates</li>
+                            <li>City-owned since early 1900s</li>
+                            <li>Operates electric, water, and internet services</li>
+                            <li>Revenue surplus used for community projects and infrastructure</li>
+                            <li><strong>Often used as the benchmark in Iowa rate comparisons</strong></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="info-card" style="margin-top: 2rem;">
+                    <h3>📚 National Context</h3>
+                    <p style="margin-bottom: 0.75rem;">
+                        There are approximately 2,000 municipal electric utilities operating in the United States. According to the American Public Power Association (APPA), public power customers on average pay lower rates than customers of investor-owned utilities.
+                    </p>
+                    <p style="margin-bottom: 0;">
+                        Recent successful municipalization campaigns include Boulder, CO (2011–2020 effort, ultimately settled with Xcel Energy for significant concessions) and Winter Park, FL (acquired Florida Power &amp; Light's local network in 2005, with rates and reliability improving measurably). Each city's path is unique, Cedar Rapids' path through Iowa law will require its own analysis.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── WHAT WE STILL NEED ───────────────────────────── -->
+        <section class="section">
+            <div class="container">
+                <h2>Data We Are Still Gathering</h2>
+                <p style="font-size: 1.1rem; color: #555; margin-bottom: 1.5rem;">
+                    This campaign is built on facts. Below is the data we are actively working to compile. If you can help, especially if you have experience with utility regulation, economics, or Iowa law, <a href="contact.html" style="color: #1a6b3a;">please reach out</a>.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem;">
+                    <div class="info-card">
+                        <h3>⚖️ Iowa Legal Framework</h3>
+                        <p>Iowa Code Chapter 388 governs municipal utilities. We need a full legal analysis of the specific requirements for Cedar Rapids to acquire Alliant's distribution infrastructure, including Iowa Code § 476.1 on IUB jurisdiction.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>💰 Acquisition Cost Estimate</h3>
+                        <p>The biggest unknown: what would it cost Cedar Rapids to acquire Alliant's local distribution network? This requires a rate base analysis, depreciated asset valuation, and negotiation scenario modeling.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📋 IUB Approval Process</h3>
+                        <p>A municipalization would require Iowa Utilities Board approval. We need to map the exact regulatory pathway, timeline, and requirements including notice, hearings, and the IUB's "public convenience and necessity" standard.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🗳️ Ballot Initiative Requirements</h3>
+                        <p>Cedar Rapids City Charter and Iowa Code requirements for a ballot referendum on municipal utility acquisition, including exact signature thresholds, timeline, and any required council action before a public vote.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="contact.html" class="cta-button">Help Us Research →</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 0.5rem;">Our Power Our Choice, Cedar Rapids, Iowa</p>
+            <p>A grassroots campaign to bring a municipal electric utility referendum to the 2027 ballot.</p>
+            <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">
+                <a href="contact.html">Contact us</a> &nbsp;|&nbsp;
+                <a href="index.html">Home</a> &nbsp;|&nbsp;
+                <a href="petition.html">Sign the Petition</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="ticker.js"></script>
+</body>
+</html>
